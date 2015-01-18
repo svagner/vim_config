@@ -39,11 +39,16 @@ Plugin 'mitsuhiko/vim-jinja'            " Jinja support for vim
 Plugin 'mitsuhiko/vim-python-combined'  " Combined Python 2/3 for Vim
 " --- Perl ---
 Plugin 'vim-perl/vim-perl'
+Plugin 'c9s/perlomni.vim'
 " --- Erlang ---
 Plugin 'jimenezrick/vimerl'
 " --- GoLang ---
+"Plugin 'fatih/vim-go'
 Plugin 'dgryski/vim-godef'
 Plugin 'Blackrush/vim-gocode'
+
+"---------------=== Check syntax ===-------------
+Plugin 'scrooloose/syntastic'
 
 call vundle#end()                       " required
 
@@ -193,6 +198,7 @@ autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 autocmd FileType sql setlocal omnifunc=sqlcomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd FileType go setlocal completefunc=youcompleteme#Complete
+autocmd FileType perl setlocal completefunc=youcompleteme#Complete
 
 " highlight if we have more then 80 chars
 augroup vimrc_autocmds
